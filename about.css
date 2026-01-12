@@ -1,0 +1,264 @@
+/* ================= GLOBAL REFINEMENT ================= */
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ================= NAVBAR SCROLL BEHAVIOR ================= */
+.site-header {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.site-header.nav-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* ================= ABOUT HERO ================= */
+/* ================= ABOUT HERO (SAMA KAYA HOME) ================= */
+.about-hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* background image */
+.about-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* overlay */
+.about-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65));
+  display: flex;
+  align-items: flex-end; /* ⬇️ NEMPEL KE BAWAH */
+  justify-content: flex-start; /* ⬅️ NEMPEL KE KIRI */
+}
+
+/* hero content */
+.about-hero .hero-inner {
+  width: 100%;
+  padding: 0 5% 120px; /* ⬅️ KIRI + BAWAH (SAMA KAYA HOME) */
+  text-align: left;
+}
+
+/* title */
+.about-hero .hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 68px;
+  line-height: 1.05;
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+/* subtitle */
+.about-hero .hero-sub {
+  max-width: 520px;
+  font-size: 15px;
+  color: #fff;
+  opacity: 0.95;
+}
+
+/* ================= PHILOSOPHY & STORY ================= */
+.philosophy-grid,
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.philosophy-text,
+.story-text {
+  max-width: 520px;
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--accent);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.about-philosophy h2,
+.about-story h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  color: var(--dark);
+}
+
+.about-philosophy p,
+.about-story p {
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+/* image depth */
+.image-square {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= VALUES ================= */
+.about-values {
+  background: #fff;
+}
+
+.about-values h2 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 48px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.value-card {
+  text-align: center;
+  padding: 0 16px;
+}
+
+.value-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.value-card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ================= OWNER QUOTE ================= */
+.quote-section {
+  background: var(--accent);
+  color: #fff;
+  padding: var(--section-padding) 0;
+  text-align: center;
+}
+
+.quote-section p {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  line-height: 1.5;
+  max-width: 900px;
+  margin: 0 auto 16px;
+}
+
+.quote-section span {
+  font-size: 13px;
+  letter-spacing: 2px;
+  opacity: 0.75;
+}
+
+/* ================= FOOTER ================= */
+/* Footer styling menggunakan styles.css - tidak perlu override */
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET / iPad */
+@media (max-width: 1024px) {
+  .philosophy-grid,
+  .story-grid {
+    gap: 50px;
+  }
+  
+  .about-hero .hero-title {
+    font-size: 56px;
+  }
+}
+
+/* TABLET PORTRAIT */
+@media (max-width: 900px) {
+  .philosophy-grid,
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+  
+  .about-hero .hero-title {
+    font-size: 46px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .about-hero .hero-inner {
+    padding: 0 4% 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .quote-section p {
+    font-size: 24px;
+  }
+
+  .about-hero .hero-inner {
+    padding: 0 4% 60px;
+  }
+  
+  .about-hero .hero-title {
+    font-size: 38px;
+  }
+  
+  .philosophy-grid,
+  .story-grid {
+    gap: 32px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .about-hero .hero-title {
+    font-size: 32px;
+  }
+  
+  .quote-section p {
+    font-size: 20px;
+  }
+  
+  .values-grid {
+    gap: 18px;
+  }
+  
+  .philosophy-grid,
+  .story-grid {
+    gap: 28px;
+  }
+}

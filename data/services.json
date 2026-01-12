@@ -1,0 +1,53 @@
+{
+  "services": [
+    {
+      "title": "Spa Experience",
+      "cardTitle": "Spa & Wellness",
+      "description": "Rangkaian perawatan holistik yang dirancang untuk menenangkan tubuh, pikiran, dan jiwa. Menggabungkan sentuhan terapeutik dan suasana yang menenangkan untuk menghadirkan pengalaman relaksasi yang menyeluruh dan bermakna.",
+      "image": "assets/service/2.jpg",
+      "alt": "Relaxation Massage"
+    },
+    {
+      "title": "Healing Therapy",
+      "cardTitle": "Nail Care (EXPRESS)",
+      "description": "Perawatan kuku praktis dan efisien bagi Anda yang memiliki waktu terbatas. Memberikan sentuhan cepat namun tetap profesional untuk hasil kuku yang bersih, rapi, dan segar dalam waktu singkat.",
+      "image": "assets/service/3.jpg",
+      "alt": "Healing Therapy"
+    },
+    {
+      "title": "Body Treatment",
+      "cardTitle": "Nail Care",
+      "description": "Ekspresi keindahan melalui detail nail art yang elegan dan berkelas. Setiap desain dikerjakan dengan presisi, menyesuaikan gaya personal Anda untuk hasil yang cantik, modern, dan tetap refined.",
+      "image": "assets/service/4.jpg",
+      "alt": "Body Treatment"
+    },
+    {
+      "title": "Facial Care",
+      "cardTitle": "Nail Art",
+      "description": "Ekspresi keindahan melalui detail nail art yang elegan dan berkelas. Setiap desain dikerjakan dengan presisi, menyesuaikan gaya personal Anda untuk hasil yang cantik, modern, dan tetap refined.",
+      "image": "assets/service/5.jpg",
+      "alt": "Facial Care"
+    },
+    {
+      "title": "Body Treatment",
+      "cardTitle": "Eyelash Care",
+      "description": "Perawatan bulu mata untuk tampilan mata yang lebih hidup dan ekspresif. Dilakukan dengan teknik profesional dan produk pilihan untuk menjaga kekuatan, kelentikan, dan keindahan bulu mata secara alami.",
+      "image": "assets/service/6.jpg",
+      "alt": "Body Treatment"
+    },
+    {
+      "title": "Body Treatment",
+      "cardTitle": "Brow Care",
+      "description": "Perawatan alis yang dirancang untuk membingkai wajah secara natural dan seimbang. Mulai dari shaping hingga perawatan intensif untuk menjaga alis tetap rapi, sehat, dan selaras dengan karakter wajah Anda.",
+      "image": "assets/service/7.jpg",
+      "alt": "Body Treatment"
+    },
+    {
+      "title": "Body Treatment",
+      "cardTitle": "Waxing",
+      "description": "Perawatan waxing dengan teknik lembut dan higienis untuk hasil kulit halus lebih lama. Menggunakan produk berkualitas yang aman untuk kulit sensitif, membantu mengurangi iritasi dan menjaga kenyamanan selama perawatan.",
+      "image": "assets/service/8.jpg",
+      "alt": "Body Treatment"
+    }
+  ]
+}

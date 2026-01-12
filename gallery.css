@@ -1,0 +1,234 @@
+/* ================= NAVBAR SCROLL BEHAVIOR ================= */
+.site-header {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  will-change: transform, opacity;
+}
+
+/* saat disembunyikan */
+.site-header.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* optional: saat scroll sedikit jadi lebih tipis */
+.site-header.scrolled {
+  background: linear-gradient(180deg, rgba(139, 62, 30, 0.9), rgba(139, 62, 30, 0.75));
+  backdrop-filter: blur(6px);
+}
+
+/* ================= GALLERY HERO ================= */
+.gallery-hero {
+  position: relative;
+  height: calc(100vh - var(--header-height-desktop));
+  margin-top: var(--header-height-desktop);
+  overflow: hidden;
+}
+
+.gallery-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-hero-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(20, 10, 8, 0.25), rgba(20, 10, 8, 0.55));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: var(--font-size-h1);
+  margin-bottom: 10px;
+  color: #fff; /* ← PAKSA PUTIH */
+}
+
+/* Sub text hero */
+.hero-sub {
+  font-size: var(--font-size-body);
+  max-width: 520px;
+  margin-bottom: 24px;
+  color: #fff; /* ← PAKSA PUTIH */
+  opacity: 0.95; /* biar lebih elegan */
+}
+
+/* ================= GALLERY SECTION ================= */
+.gallery-section {
+  padding: 40px 0;
+  background: var(--bg);
+}
+
+/* GRID UTAMA */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 220px; /* tinggi dasar */
+  gap: 8px;
+}
+
+/* ITEM DASAR */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+}
+
+/* IMAGE */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 0.8s ease;
+}
+
+/* SOFT GRADIENT OVERLAY */
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.35));
+  opacity: 0.9;
+  transition: opacity 0.5s ease;
+}
+
+/* HOVER ELEGANT */
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* VARIASI UKURAN */
+.gallery-item.tall {
+  grid-row: span 2; /* tinggi */
+}
+
+.gallery-item.wide {
+  grid-column: span 2; /* lebar */
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 180px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 160px;
+    gap: 4px;
+  }
+
+  .gallery-item.tall,
+  .gallery-item.wide {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+/* ================= LIGHTBOX ================= */
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.gallery-lightbox.active {
+  display: flex;
+}
+
+.gallery-lightbox img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 16px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 42px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+/* TABLET / iPad */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    gap: 20px;
+  }
+}
+
+/* TABLET PORTRAIT */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 48px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .gallery-hero h1 {
+    font-size: 42px;
+  }
+  
+  .gallery-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 36px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .gallery-hero h1 {
+    font-size: 32px;
+  }
+  
+  .gallery-grid {
+    gap: 14px;
+  }
+}

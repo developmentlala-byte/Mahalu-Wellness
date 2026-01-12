@@ -1,0 +1,24 @@
+{
+  "services": [
+    {
+      "title": "OUR<br />SERVICES",
+      "link": "services.html",
+      "image": "assets/services/11.JPG"
+    },
+    {
+      "title": "VIEW OUR<br />GALLERY",
+      "link": "gallery.html",
+      "image": "assets/services/8.jpg"
+    },
+    {
+      "title": "FIND OUR<br />PLACE",
+      "link": "contact.html",
+      "image": "assets/services/17.JPG"
+    },
+    {
+      "title": "BOOK<br />NOW",
+      "link": "contact.html",
+      "image": "assets/services/15.JPG"
+    }
+  ]
+}

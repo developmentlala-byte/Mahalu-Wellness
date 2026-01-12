@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="assets/logo/Logo2.png" />
+    <link rel="apple-touch-icon" href="assets/logo/Logo2.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services – Mahalu Spa</title>
+    <meta name="description" content="Mahalu Spa & Wellness menghadirkan perawatan premium seperti spa, nail art, eyelash, waxing, dan wellness therapy di Depok. Rasakan pengalaman relaksasi terbaik." />
+    <!-- META KEYWORDS (OPSIONAL) -->
+    <meta name="keywords" content="Mahalu Spa, Spa Depok, Nail Art Depok, Eyelash Depok, Wellness Spa, Facial, Waxing, Relaxation Massage" />
+    <!-- CANONICAL (ANTI DUPLICATE CONTENT) -->
+    <link rel="canonical" href="https://www.mahaluspa.com/home.html" />
+    <!-- ROBOTS -->
+    <meta name="robots" content="index, follow" />
+    <!-- THEME COLOR (MOBILE BROWSER) -->
+    <meta name="theme-color" content="#b26632" />
+    <!-- OPEN GRAPH (SOSIAL MEDIA) -->
+    <meta property="og:title" content="Mahalu Spa & Wellness" />
+    <meta property="og:description" content="A calm destination where wellness, beauty, and mindful care come together." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.mahaluspa.com/" />
+    <meta property="og:image" content="https://www.mahaluspa.com/assets/img/og-image.jpg" />
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mahalu Spa & Wellness" />
+    <meta name="twitter:description" content="Premium spa, nail art, eyelash & wellness experience in Depok." />
+    <meta name="twitter:image" content="https://www.mahaluspa.com/assets/img/og-image.jpg" />
+
+    <!-- PRECONNECT (PERFORMA) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- STRUCTURED DATA (LOCAL SEO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Mahalu Spa & Wellness",
+        "image": "https://www.mahaluspa.com/assets/img/og-image.jpg",
+        "url": "https://www.mahaluspa.com",
+        "telephone": "+62-812-3456-7890",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Abdul Gani Raya No.48",
+          "addressLocality": "Depok",
+          "addressRegion": "Jawa Barat",
+          "postalCode": "16414",
+          "addressCountry": "ID"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -6.43717,
+          "longitude": 106.83191
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "10:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "10:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "10:00",
+            "closes": "20:00"
+          }
+        ],
+        "sameAs": ["https://www.instagram.com/mahaluspa", "https://maps.google.com/?q=Mahalu+Spa+Depok"]
+      }
+    </script>
+
+    <!-- SERVICES CSS -->
+    <link rel="stylesheet" href="services.css" />
+  </head>
+
+  <body>
+    <!-- ================= MODAL DETAIL SERVICE ================= -->
+    <div class="service-modal" id="serviceModal">
+      <div class="modal-backdrop"></div>
+      <div class="modal-box">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-image">
+          <img id="modalImage" alt="Service image" />
+        </div>
+        <div class="modal-content">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDesc"></p>
+          <a href="https://widget.zenwel.com/677947049/mahalu-spa-nail-art?lang=id&lid=16501" class="btn btn-book">BOOK THIS SERVICE</a>
+        </div>
+      </div>
+    </div>
+    <div id="header-placeholder"></div>
+
+    <!-- HERO (VIDEO) -->
+    <section class="services-hero">
+      <img src="assets/img/17.JPG" alt="Mahalu Spa Services" class="services-hero-img" />
+      <div class="hero-overlay">
+        <div class="hero-inner">
+          <h1 class="hero-title">Our Services</h1>
+          <p class="hero-sub">
+            “Setiap layanan di Mahalu adalah perjalanan pulang ke diri, dengan sentuhan yang menenangkan, ritual penuh niat, dan perawatan yang merawat kecantikan secara utuh. Semua kami hadirkan untuk satu tujuan: membuatmu lebih
+            seimbang,lebih indah, dan lebih hadir dalam dirimu.”
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ================= SERVICES SLIDER ================= -->
+    <section class="services-menu">
+      <div class="container">
+        <h2 class="menu-title">Our Services</h2>
+        <div class="menu-slider">
+          <button class="menu-nav prev" aria-label="Previous">‹</button>
+          <div class="menu-track">
+            <!-- Service items will be loaded from JSON via js/services.js -->
+          </div>
+
+          <button class="menu-nav next" aria-label="Next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <div id="footer-placeholder"></div>
+    <script src="js/services.js" defer></script>
+    <script src="layout.js" defer></script>
+    <script src="script.js"></script>
+  </body>
+</html>
