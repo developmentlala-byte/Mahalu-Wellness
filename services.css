@@ -31,41 +31,49 @@
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: linear-gradient(
-    180deg,
-    rgba(20, 10, 8, 0.25),
-    rgba(20, 10, 8, 0.55)
-  );
-
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.45) 50%, rgba(0, 0, 0, 0.6) 100%);
   display: flex;
-  align-items: flex-end; /* ⬇️ NEMPEL KE BAWAH */
-  justify-content: flex-start; /* ⬅️ NEMPEL KE KIRI */
+  align-items: flex-end;
+  justify-content: flex-start;
   color: #fff;
+}
+
+.services-hero .hero-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center bottom, rgba(178, 102, 50, 0.08) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 /* hero content */
 .services-hero .hero-inner {
   width: 100%;
-  padding: 0 5% 120px; /* ⬅️ KIRI + BAWAH (SAMA KAYA ABOUT) */
+  padding: 0 5% 80px;
   text-align: left;
+  position: relative;
+  z-index: 1;
 }
 
 /* TEXT */
 .services-hero .hero-title {
   font-family: "Playfair Display", serif;
-  font-size: 68px;
-  line-height: 1.05;
-  margin-bottom: 14px;
+  font-size: var(--font-size-h1);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
   color: #fff;
-  text-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .services-hero .hero-sub {
-  max-width: 520px;
-  font-size: 15px;
-  color: #fff;
-  opacity: 0.95;
-  line-height: 1.8;
+  max-width: 580px;
+  font-size: var(--font-size-body);
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+  color: rgba(255, 255, 255, 0.96);
 }
 
 /* RESPONSIVE */

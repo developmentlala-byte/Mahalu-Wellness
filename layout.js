@@ -39,11 +39,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // 1. Fungsionalitas Menu Mobile
         if (hamburger && mobileNav) {
-            hamburger.addEventListener("click", () => {
+            // Create backdrop overlay if it doesn't exist
+            let backdrop = document.querySelector('.mobile-nav-overlay');
+            if (!backdrop) {
+                backdrop = document.createElement('div');
+                backdrop.className = 'mobile-nav-overlay';
+                document.body.appendChild(backdrop);
+            }
+
+            const toggleMenu = () => {
+                const isOpen = mobileNav.classList.contains("open");
                 mobileNav.classList.toggle("open");
                 hamburger.classList.toggle("open");
-                // Mencegah scroll pada body saat menu mobile terbuka
-                document.body.style.overflow = mobileNav.classList.contains("open") ? "hidden" : "";
+                backdrop.classList.toggle("active");
+                document.body.style.overflow = !isOpen ? "hidden" : "";
+            };
+
+            hamburger.addEventListener("click", toggleMenu);
+            
+            // Close menu when backdrop is clicked
+            backdrop.addEventListener("click", () => {
+                mobileNav.classList.remove("open");
+                hamburger.classList.remove("open");
+                backdrop.classList.remove("active");
+                document.body.style.overflow = "";
             });
 
             // Tutup menu saat salah satu link di dalamnya diklik
@@ -51,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 link.addEventListener("click", () => {
                     mobileNav.classList.remove("open");
                     hamburger.classList.remove("open");
+                    backdrop.classList.remove("active");
                     document.body.style.overflow = "";
                 });
             });
