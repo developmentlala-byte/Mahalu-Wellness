@@ -2701,7 +2701,7 @@ body.loading {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: linear-gradient(135deg, #fff4ed 0%, #fff8f3 50%, #fff4ed 100%);
+  background: linear-gradient(135deg, #d4c4b0 0%, #c9b7a3 50%, #beab96 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2728,9 +2728,11 @@ body.loading {
   width: 120px;
   height: auto;
   display: block;
-  opacity: 0.9;
+  opacity: 1;
   animation: loaderFadeIn 0.8s ease-out;
   object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2))
+          drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
 }
 
 .loader-spinner {
