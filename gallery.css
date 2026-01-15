@@ -65,6 +65,7 @@
   font-size: var(--font-size-h1);
   margin-bottom: 10px;
   color: #fff;
+  animation: luxuryFadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* Sub text hero */
@@ -74,6 +75,7 @@
   margin-bottom: 24px;
   color: #fff;
   opacity: 0.95;
+  animation: luxuryFadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.25s both;
 }
 
 /* ================= GALLERY SECTION ================= */

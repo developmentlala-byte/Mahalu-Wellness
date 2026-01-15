@@ -400,6 +400,7 @@ body.loading {
   margin-bottom: 24px;
   color: #fff;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: luxuryFadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* Sub text hero */
@@ -411,6 +412,7 @@ body.loading {
   max-width: 580px;
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.96);
+  animation: luxuryFadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.25s both;
 }
 
 /* PAGE SECTION */
@@ -778,73 +780,242 @@ body.loading {
   opacity: 0.8;
 }
 
-/* ================= FOOTER – LUXURY ================= */
+/* ================= FOOTER – LUXURY REDESIGNED ================= */
 .site-footer {
-  background: linear-gradient(135deg, rgba(178, 102, 50, 0.98), rgba(139, 62, 30, 0.95));
+  background: linear-gradient(135deg, rgba(139, 62, 30, 1), rgba(120, 50, 20, 1)); /* Warna lebih pekat */
   color: #fff;
-  padding: 0;
+  padding-top: 50px;
+  padding-bottom: 24px;
   position: relative;
   overflow: hidden;
 }
 
-/* Subtle pattern overlay */
-.site-footer::before {
-  content: "";
+/* Background Pattern (Optional) */
+.footer-pattern {
   position: absolute;
   inset: 0;
   background-image: 
-    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 40%);
   pointer-events: none;
+  z-index: 0;
 }
 
-.footer-inner {
+/* Pastikan konten di atas pattern */
+.site-footer .container {
   position: relative;
   z-index: 1;
-  padding: 50px 0 30px;
-  text-align: center;
 }
 
-.footer-logo {
+/* --- TOP SECTION (GRID LAYOUT) --- */
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr; /* Kolom 1 lebih lebar */
+  gap: 40px;
+  margin-bottom: 32px;
+}
+
+/* Widget Styling */
+.footer-title {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-title::after {
+  content: "";
   display: block;
-  margin: 0 auto 24px;
-  width: 120px;
-  opacity: 0.92;
-  transition: opacity 0.3s ease;
+  width: 40px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  margin-top: 8px;
 }
 
-.footer-logo:hover {
-  opacity: 1;
-}
-
-.footer-logo img {
-  width: 100%;
-  height: auto;
+/* 1. Brand Widget */
+.footer-logo-img {
+  width: auto;           /* Biarkan rasio aspek terjaga */
+  max-width: 280px;      /* DIPERBESAR: Sebelumnya 180px */
+  max-height: 120px;     /* DIPERBESAR: Sebelumnya 80px */
+  margin-bottom: 24px;   /* Jarak ke deskripsi bawahnya */
   display: block;
+  object-fit: contain;
+  
+  /* OPSIONAL: Jika logo aslimu hitam, aktifkan ini agar jadi putih */
+  /* filter: brightness(0) invert(1); */
 }
 
+.footer-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 320px;
+}
+
+/* 2. Links Widget */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  transform: translateX(5px); /* Efek geser saat hover */
+}
+
+/* 3. Contact Widget */
 .footer-address {
   font-style: normal;
-  font-size: var(--font-size-small);
-  line-height: 1.7;
-  opacity: 0.85;
-  margin-bottom: 24px;
-  letter-spacing: 0.2px;
-  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
+.address-item {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.contact-link {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  font-size: 15px;
+  display: inline-block;
+  transition: opacity 0.3s;
+  font-weight: 400;
+}
+
+.contact-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-underline-offset: 4px;
+}
+
+/* --- DIVIDER --- */
+.footer-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* --- BOTTOM SECTION (FLEX LAYOUT) --- */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  padding-top: 24px;
-  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .footer-copyright {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
   margin: 0;
-  font-size: var(--font-size-x-small);
-  opacity: 0.7;
   letter-spacing: 0.5px;
-  font-weight: 300;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%; /* Membuat icon bulat penuh */
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: #fff;
+  color: var(--dark); /* Menggunakan warna gelap branding kamu saat hover */
+  border-color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet (dibawah 1024px) */
+@media (max-width: 1024px) {
+  .footer-top {
+    gap: 30px;
+    grid-template-columns: 1fr 1fr; /* Jadi 2 kolom */
+  }
+  
+  /* Brand widget ambil lebar penuh di tablet */
+  .brand-widget {
+    grid-column: 1 / -1; 
+    text-align: center;
+    /* Di tablet, pastikan logo ada di tengah */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-desc {
+    margin: 0 auto; /* Tengahin deskripsi */
+  }
+}
+
+/* Mobile (dibawah 768px) */
+@media (max-width: 768px) {
+  .site-footer {
+    padding-top: 60px;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-direction: column; /* Tumpuk ke bawah */
+    gap: 40px;
+    text-align: left; /* Rata kiri di HP */
+  }
+
+  .brand-widget {
+    text-align: left;
+    align-items: flex-start; /* Balikin ke kiri di HP */
+    grid-column: auto;
+  }
+
+  .footer-desc {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column-reverse; /* Copyright di bawah social media */
+    align-items: flex-start;
+    gap: 24px;
+  }
+  
+  .footer-copyright {
+    font-size: 12px;
+  }
 }
 
 /* ============================= */
@@ -1093,6 +1264,7 @@ body.loading {
   margin-bottom: 24px;
   color: #fff;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: luxuryFadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* subtitle */
@@ -1103,6 +1275,7 @@ body.loading {
   line-height: 1.75;
   letter-spacing: 0.2px;
   color: rgba(255, 255, 255, 0.96);
+  animation: luxuryFadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.25s both;
 }
 /* ================= MAP SECTION ================= */
 /* ================= LOCATION MULTI ================= */
@@ -1887,15 +2060,41 @@ body.loading {
   }
   
   .footer-inner {
-    padding: 40px 20px 24px;
+    padding: 48px 20px 28px;
   }
-  
-  .footer-logo {
-    width: 100px;
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
   }
-  
+
+  .footer-section {
+    align-items: center;
+  }
+
+  .footer-left,
+  .footer-right,
+  .footer-center {
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
   .footer-address {
-    font-size: 13px;
+    font-size: 14px;
+  }
+
+  .footer-phone,
+  .footer-email {
+    font-size: 14px;
   }
 }
 
@@ -1958,7 +2157,29 @@ body.loading {
   }
   
   .footer-inner {
-    padding: 36px 16px 20px;
+    padding: 40px 16px 24px;
+  }
+
+  .footer-content {
+    gap: 28px;
+  }
+
+  .footer-title {
+    font-size: 18px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer-copyright {
+    font-size: 11px;
   }
 }
 
@@ -1993,8 +2214,10 @@ body.loading {
 .loader-logo {
   width: 120px;
   height: auto;
+  display: block;
   opacity: 0.9;
   animation: loaderFadeIn 0.8s ease-out;
+  object-fit: contain;
 }
 
 .loader-spinner {
@@ -2041,6 +2264,18 @@ body.loading {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* ================= LUXURY FADE-IN ANIMATION ================= */
+@keyframes luxuryFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
