@@ -85,12 +85,23 @@
     </script>
     <!-- GALLERY CSS -->
     <link rel="stylesheet" href="gallery.css" />
+    <!-- Loading Screen Inline Script -->
+    <script>
+      (function() {
+        var loaderHTML = '<div class="page-loader" id="pageLoader"><div class="loader-content"><img src="assets/logo/Logo2.png" alt="Mahalu Spa" class="loader-logo" /><div class="loader-spinner"></div></div></div>';
+        document.addEventListener('DOMContentLoaded', function() {
+          if (document.body) {
+            document.body.insertAdjacentHTML('afterbegin', loaderHTML);
+            document.body.classList.add('loading');
+          }
+        });
+      })();
+    </script>
   </head>
 
   <body>
     <div id="header-placeholder"></div>
 
-    <!-- HERO (VIDEO) -->
     <section class="gallery-hero">
       <img src="assets/img/20.jpg" alt="Mahalu Spa Gallery" class="gallery-hero-img" />
       <div class="gallery-hero-overlay">

@@ -29,7 +29,9 @@ async function loadServices() {
       menuCard.setAttribute('data-desc', service.description);
       menuCard.setAttribute('data-image', service.image);
       menuCard.innerHTML = `
-        <img src="${service.image}" alt="${service.alt}" />
+        <div class="menu-card-image-wrapper">
+          <img src="${service.image}" alt="${service.alt}" />
+        </div>
         <div class="menu-overlay">
           <h3>${service.cardTitle}</h3>
           <span class="view-detail">VIEW DETAILS</span>

@@ -422,6 +422,11 @@
 
 /* TABLET PORTRAIT */
 @media (max-width: 900px) {
+  .about-hero {
+    height: calc(100vh - var(--header-height-tablet));
+    margin-top: var(--header-height-tablet);
+  }
+  
   .section {
     padding: 70px 0;
   }
@@ -471,6 +476,11 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
+  .about-hero {
+    height: calc(100vh - var(--header-height-tablet));
+    margin-top: var(--header-height-tablet);
+  }
+  
   .values-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -481,6 +491,11 @@
 }
 
 @media (max-width: 600px) {
+  .about-hero {
+    height: calc(100vh - var(--header-height-mobile));
+    margin-top: var(--header-height-mobile);
+  }
+  
   .section {
     padding: 60px 0;
   }
@@ -548,6 +563,11 @@
 
 /* SMALL MOBILE */
 @media (max-width: 480px) {
+  .about-hero {
+    height: calc(100vh - var(--header-height-mobile));
+    margin-top: var(--header-height-mobile);
+  }
+  
   .section {
     padding: 50px 0;
   }
@@ -609,5 +629,41 @@
   .about-story p {
     font-size: 15px;
     line-height: 1.85;
+  }
+}
+
+/* EXTRA SMALL MOBILE */
+@media (max-width: 360px) {
+  .about-hero .hero-title {
+    font-size: 32px;
+  }
+  
+  .about-hero .hero-sub {
+    font-size: 13px;
+  }
+  
+  .about-hero .hero-inner {
+    padding: 0 4% 50px;
+  }
+  
+  .about-philosophy h2,
+  .about-story h2 {
+    font-size: 26px;
+  }
+  
+  .about-values h2 {
+    font-size: 26px;
+  }
+  
+  .value-card {
+    padding: 24px 16px;
+  }
+  
+  .value-card h3 {
+    font-size: 20px;
+  }
+  
+  .section {
+    padding: 45px 0;
   }
 }

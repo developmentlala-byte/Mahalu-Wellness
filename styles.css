@@ -60,6 +60,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+body.loading {
+  overflow: hidden;
+}
+
 /* container */
 .container {
   width: 90%;
@@ -1512,8 +1516,13 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
   }
+  .map-wrapper {
+    width: 96%;
+    border-radius: 20px;
+  }
+  
   .map-wrapper iframe {
-    height: 320px;
+    height: 300px;
   }
 }
 
@@ -1571,6 +1580,15 @@ body {
   
   .location-branches {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .map-wrapper {
+    width: 94%;
+    border-radius: 22px;
+  }
+  
+  .map-wrapper iframe {
+    height: 320px;
   }
 }
 
@@ -1716,6 +1734,16 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
+  
+  .map-wrapper {
+    width: 94%;
+    border-radius: 20px;
+  }
+  
+  .map-wrapper iframe {
+    height: 300px;
+  }
+  
   .booking-inner h2 {
     font-size: 32px;
   }
@@ -1730,6 +1758,10 @@ body {
   
   .page-section {
     padding: var(--section-padding) 0;
+  }
+  
+  .container {
+    padding: 0 20px;
   }
 }
 
@@ -1827,6 +1859,15 @@ body {
     grid-template-columns: 1fr;
   }
   
+  .map-wrapper {
+    width: 96%;
+    border-radius: 18px;
+  }
+  
+  .map-wrapper iframe {
+    height: 280px;
+  }
+  
   .service-item .overlay-box {
     min-width: 260px;
     padding: 14px 20px;
@@ -1855,5 +1896,195 @@ body {
   
   .footer-address {
     font-size: 13px;
+  }
+}
+
+/* EXTRA SMALL MOBILE */
+@media (max-width: 360px) {
+  .container {
+    width: 94%;
+    padding: 0 14px;
+  }
+  
+  .hero-title {
+    font-size: 32px;
+  }
+  
+  .hero-sub {
+    font-size: 13px;
+  }
+  
+  .location-hero .hero-title {
+    font-size: 30px;
+  }
+  
+  .location-header h2 {
+    font-size: 26px;
+  }
+  
+  .booking-inner h2 {
+    font-size: 24px;
+  }
+  
+  .map-wrapper {
+    width: 96%;
+    border-radius: 16px;
+  }
+  
+  .map-wrapper iframe {
+    height: 260px;
+  }
+  
+  .location-item {
+    padding: 20px 16px;
+  }
+  
+  .service-item .overlay-box {
+    min-width: 240px;
+    padding: 12px 18px;
+    gap: 14px;
+  }
+  
+  .service-item h3 {
+    font-size: 15px;
+  }
+  
+  .review-title {
+    font-size: 24px;
+  }
+  
+  .review-text {
+    font-size: 12px;
+  }
+  
+  .footer-inner {
+    padding: 36px 16px 20px;
+  }
+}
+
+/* ================= LOADING SCREEN - LUXURY ================= */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(135deg, #fff4ed 0%, #fff8f3 50%, #fff4ed 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.loader-logo {
+  width: 120px;
+  height: auto;
+  opacity: 0.9;
+  animation: loaderFadeIn 0.8s ease-out;
+}
+
+.loader-spinner {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  animation: loaderFadeIn 0.8s ease-out 0.2s both;
+}
+
+.loader-spinner::before,
+.loader-spinner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--accent);
+  animation: loaderSpin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+.loader-spinner::after {
+  border-top-color: var(--dark);
+  animation-delay: -0.6s;
+  width: 36px;
+  height: 36px;
+  top: 6px;
+  left: 6px;
+}
+
+@keyframes loaderSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loaderFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Loading Screen */
+@media (max-width: 600px) {
+  .loader-logo {
+    width: 100px;
+  }
+  
+  .loader-spinner {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .loader-spinner::after {
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 5px;
+  }
+  
+  .loader-content {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loader-logo {
+    width: 90px;
+  }
+  
+  .loader-spinner {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .loader-spinner::after {
+    width: 28px;
+    height: 28px;
+    top: 4px;
+    left: 4px;
+  }
+  
+  .loader-content {
+    gap: 24px;
   }
 }

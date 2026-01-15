@@ -83,6 +83,18 @@
         "sameAs": ["https://www.instagram.com/mahaluspa", "https://maps.google.com/?q=Mahalu+Spa+Depok"]
       }
     </script>
+    <!-- Loading Screen Inline Script -->
+    <script>
+      (function() {
+        var loaderHTML = '<div class="page-loader" id="pageLoader"><div class="loader-content"><img src="assets/logo/Logo2.png" alt="Mahalu Spa" class="loader-logo" /><div class="loader-spinner"></div></div></div>';
+        document.addEventListener('DOMContentLoaded', function() {
+          if (document.body) {
+            document.body.insertAdjacentHTML('afterbegin', loaderHTML);
+            document.body.classList.add('loading');
+          }
+        });
+      })();
+    </script>
   </head>
 
   <body>
