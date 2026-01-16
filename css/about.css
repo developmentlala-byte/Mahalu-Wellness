@@ -29,15 +29,7 @@
   background: linear-gradient(180deg, transparent, rgba(178, 102, 50, 0.15), transparent);
 }
 
-/* ================= NAVBAR SCROLL BEHAVIOR ================= */
-.site-header {
-  transition: transform 0.35s ease, opacity 0.35s ease;
-}
-
-.site-header.nav-hidden {
-  transform: translateY(-100%);
-  opacity: 0;
-}
+/* Note: Navbar scroll behavior is handled in styles.css */
 
 /* ================= ABOUT HERO - ULTRA LUXURY ================= */
 .about-hero {
@@ -95,9 +87,9 @@
   z-index: 1;
 }
 
-/* title */
+/* title - Head Font */
 .about-hero .hero-title {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head, "Playfair Display", serif);
   font-size: var(--font-size-h1);
   font-weight: 300;
   line-height: 1.1;
@@ -176,7 +168,7 @@
 
 .about-philosophy h2,
 .about-story h2 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head, "Playfair Display", serif);
   font-size: 48px;
   line-height: 1.18;
   margin-bottom: 28px;
@@ -188,6 +180,7 @@
 
 .about-philosophy p,
 .about-story p {
+  font-family: var(--font-body, "Inter", sans-serif);
   color: var(--muted);
   line-height: 2;
   font-size: 17px;
@@ -268,7 +261,7 @@
 }
 
 .about-values h2 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head, "Playfair Display", serif);
   font-size: 48px;
   margin-bottom: 64px;
   font-weight: 300;
@@ -330,7 +323,7 @@
 }
 
 .value-card h3 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head, "Playfair Display", serif);
   font-size: 26px;
   margin-bottom: 16px;
   color: var(--dark);
@@ -346,6 +339,7 @@
 }
 
 .value-card p {
+  font-family: var(--font-body, "Inter", sans-serif);
   font-size: 16px;
   color: var(--muted);
   line-height: 1.8;
@@ -364,7 +358,8 @@
 }
 
 .quote-section p {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-subhead, "Lora", serif);
+  font-style: italic;
   font-size: 32px;
   line-height: 1.5;
   max-width: 900px;

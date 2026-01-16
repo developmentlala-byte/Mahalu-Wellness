@@ -1,53 +1,52 @@
 {
   "services": [
     {
-      "title": "Spa Experience",
+      "title": "Spa & Wellness",
       "cardTitle": "Spa & Wellness",
-      "description": "Rangkaian perawatan holistik yang dirancang untuk menenangkan tubuh, pikiran, dan jiwa. Menggabungkan sentuhan terapeutik dan suasana yang menenangkan untuk menghadirkan pengalaman relaksasi yang menyeluruh dan bermakna.",
+      "description": "Perawatan spa dan wellness yang berfokus pada relaksasi tubuh dan kejernihan pikiran. Setiap treatment dilakukan secara terstruktur untuk membantu mengurangi ketegangan dan memberikan rasa nyaman yang konsisten.",
       "image": "assets/service/2.jpg",
-      "alt": "Relaxation Massage"
+      "alt": "Spa & Wellness"
     },
     {
-      "title": "Healing Therapy",
+      "title": "Nail Care (EXPRESS)",
       "cardTitle": "Nail Care (EXPRESS)",
-      "description": "Perawatan kuku praktis dan efisien bagi Anda yang memiliki waktu terbatas. Memberikan sentuhan cepat namun tetap profesional untuk hasil kuku yang bersih, rapi, dan segar dalam waktu singkat.",
+      "description": "Perawatan kuku tangan dan kaki untuk menjaga kebersihan, kesehatan, dan kerapihan. Dilakukan dengan standar higienis yang konsisten agar kuku tetap nyaman dan terawat.",
       "image": "assets/service/4.png",
-      "alt": "Healing Therapy"
+      "alt": "Nail Care (EXPRESS)"
     },
     {
-      "title": "Body Treatment",
+      "title": "Nail Care",
       "cardTitle": "Nail Care",
-      "description": "Ekspresi keindahan melalui detail nail art yang elegan dan berkelas. Setiap desain dikerjakan dengan presisi, menyesuaikan gaya personal Anda untuk hasil yang cantik, modern, dan tetap refined.",
+      "description": "Perawatan kuku tangan dan kaki untuk menjaga kebersihan, kesehatan, dan kerapihan. Dilakukan dengan standar higienis yang konsisten agar kuku tetap nyaman dan terawat.",
       "image": "assets/service/4.jpg",
-      "alt": "Body Treatment"
+      "alt": "Nail Care"
     },
     {
-      "title": "Facial Care",
+      "title": "Nail Art",
       "cardTitle": "Nail Art",
-      "description": "Ekspresi keindahan melalui detail nail art yang elegan dan berkelas. Setiap desain dikerjakan dengan presisi, menyesuaikan gaya personal Anda untuk hasil yang cantik, modern, dan tetap refined.",
-      "image": "assets/service/5.png",
-      "alt": "Facial Care"
+      "description": "Layanan dekorasi kuku dengan desain yang disesuaikan dengan preferensi pribadi.Dikerjakan secara rapi dan presisi untuk menghasilkan tampilan yang bersih dan estetis.",
+      "alt": "Nail Art"
     },
     {
-      "title": "Body Treatment",
+      "title": "Eyelash Care",
       "cardTitle": "Eyelash Care",
-      "description": "Perawatan bulu mata untuk tampilan mata yang lebih hidup dan ekspresif. Dilakukan dengan teknik profesional dan produk pilihan untuk menjaga kekuatan, kelentikan, dan keindahan bulu mata secara alami.",
+      "description": "Perawatan bulu mata untuk mempertegas tampilan mata secara natural. Mengutamakan kenyamanan serta hasil yang seimbang dengan bentuk mata.",
       "image": "assets/service/6.png",
-      "alt": "Body Treatment"
+      "alt": "Eyelash Care"
     },
     {
-      "title": "Body Treatment",
+      "title": "Brow Care",
       "cardTitle": "Brow Care",
-      "description": "Perawatan alis yang dirancang untuk membingkai wajah secara natural dan seimbang. Mulai dari shaping hingga perawatan intensif untuk menjaga alis tetap rapi, sehat, dan selaras dengan karakter wajah Anda.",
+      "description": "Perawatan alis untuk membentuk dan merapikan sesuai proporsi wajah. Hasil dirancang agar terlihat natural dan mendukung ekspresi wajah.",
       "image": "assets/service/7.jpg",
-      "alt": "Body Treatment"
+      "alt": "Brow Care"
     },
     {
-      "title": "Body Treatment",
+      "title": "Waxing",
       "cardTitle": "Waxing",
-      "description": "Perawatan waxing dengan teknik lembut dan higienis untuk hasil kulit halus lebih lama. Menggunakan produk berkualitas yang aman untuk kulit sensitif, membantu mengurangi iritasi dan menjaga kenyamanan selama perawatan.",
+      "description": "Perawatan penghilangan rambut dengan teknik yang aman dan terkontrol. Bertujuan memberikan hasil kulit yang bersih, halus, dan tetap nyaman.",
       "image": "assets/service/8.jpg",
-      "alt": "Body Treatment"
+      "alt": "Waxing"
     }
   ]
 }

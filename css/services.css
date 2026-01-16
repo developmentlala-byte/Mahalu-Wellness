@@ -1,13 +1,4 @@
-/* NAVBAR SCROLL BEHAVIOR */
-.site-header {
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-/* saat disembunyikan */
-.site-header.nav-hidden {
-  transform: translateY(-100%);
-  opacity: 0;
-}
+/* Note: Navbar scroll behavior is handled in styles.css */
 
 /* ================= SERVICES HERO ================= */
 .services-hero {
@@ -57,7 +48,7 @@
 
 /* TEXT */
 .services-hero .hero-title {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head, "Playfair Display", serif);
   font-size: var(--font-size-h1);
   font-weight: 300;
   line-height: 1.1;
@@ -113,7 +104,7 @@
 }
 
 .menu-title {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head, "Playfair Display", serif);
   font-size: 48px;
   font-weight: 300;
   letter-spacing: -1px;
@@ -260,7 +251,7 @@
 
 /* TEXT - ULTRA LUXURY TYPOGRAPHY */
 .menu-overlay h3 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head, "Playfair Display", serif);
   font-size: 26px;
   margin: 0;
   font-weight: 500;
@@ -277,9 +268,9 @@
 .menu-overlay .view-detail {
   font-size: 11px;
   letter-spacing: 2.5px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-head-sans, "Poppins", sans-serif);
   color: rgba(178, 102, 50, 0.75);
   margin-top: 6px;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -709,7 +700,7 @@
 }
 
 .modal-content h3 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head, "Playfair Display", serif);
   font-size: 36px;
   font-weight: 500;
   color: var(--dark);
@@ -719,6 +710,7 @@
 }
 
 .modal-content p {
+  font-family: var(--font-body, "Inter", sans-serif);
   color: var(--muted);
   line-height: 1.8;
   margin-bottom: 32px;

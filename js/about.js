@@ -1,26 +1,8 @@
 /* ===============================
    ABOUT PAGE – PREMIUM INTERACTION
    =============================== */
-
-/* ---------- NAVBAR HIDE / SHOW ---------- */
-(() => {
-  const header = document.querySelector(".site-header");
-  if (!header) return;
-
-  let lastScroll = window.scrollY;
-
-  window.addEventListener("scroll", () => {
-    const current = window.scrollY;
-
-    if (current > lastScroll && current > 140) {
-      header.classList.add("nav-hidden");
-    } else {
-      header.classList.remove("nav-hidden");
-    }
-
-    lastScroll = current;
-  });
-})();
+   
+/* Note: Navbar hide/show behavior is handled by layout.js */
 
 /* ---------- SCROLL REVEAL (ELEGANT) ---------- */
 (() => {

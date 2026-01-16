@@ -6,7 +6,7 @@
   --text: #3b2a23;
   --max-width: 1200px;
   --section-padding: 100px;
-  
+
   /* Premium shadows */
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -14,12 +14,18 @@
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
   --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.16);
   --shadow-2xl: 0 24px 64px rgba(0, 0, 0, 0.2);
-  
+
   /* Premium gradients */
   --gradient-gold: linear-gradient(135deg, rgba(178, 102, 50, 0.1), rgba(139, 62, 30, 0.05));
   --gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
 
-  /* typography */
+  /* typography - Font Families */
+  --font-head: "Playfair Display", "Montserrat", "Poppins", serif; /* Head - Playfair Display, Conso/Boston Angel alternatif */
+  --font-subhead: "Lora", "Didot", "Playfair Display", serif; /* Subhead - Linotype Didot alternatif (italic) */
+  --font-body: "Inter", "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; /* Body - Urw Geometric Light alternatif */
+  --font-head-sans: "Poppins", "Montserrat", sans-serif; /* Head sans-serif alternative */
+
+  /* typography - Font Sizes */
   --font-size-h1: 72px;
   --font-size-h2: 48px;
   --font-size-h3: 32px;
@@ -27,7 +33,7 @@
   --font-size-body: 17px;
   --font-size-small: 15px;
   --font-size-x-small: 13px;
-  
+
   /* Premium transitions */
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --transition-elegant: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -49,7 +55,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: var(--font-size-body);
   font-weight: 300;
   line-height: 1.7;
@@ -189,19 +195,17 @@ body.loading {
   padding: 10px 24px;
   font-weight: 500;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1),
-              0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
   transition: var(--transition-smooth);
 }
 
 .btn-book:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15),
-              0 3px 9px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15), 0 3px 9px rgba(0, 0, 0, 0.12);
 }
 .btn-cta {
-  display: inline-block;       
-  margin-top: 32px;            
+  display: inline-block;
+  margin-top: 32px;
   background: #ffffff;
   color: var(--dark);
   padding: 16px 36px;
@@ -210,8 +214,7 @@ body.loading {
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 0.8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15),
-              0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: var(--transition-smooth);
   position: relative;
   overflow: hidden;
@@ -228,8 +231,7 @@ body.loading {
 
 .btn-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2),
-              0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2), 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .btn-cta:hover::before {
@@ -239,7 +241,6 @@ body.loading {
 .btn-cta:active {
   transform: translateY(0);
 }
-
 
 /* hamburger (mobile) - ULTRA LUXURY & REFINED */
 .hamburger {
@@ -257,9 +258,7 @@ body.loading {
   position: relative;
   transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 2001;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12),
-              0 2px 8px rgba(0, 0, 0, 0.08),
-              inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
   flex-shrink: 0;
 }
 
@@ -267,15 +266,12 @@ body.loading {
   background: #ffffff;
   border-color: rgba(255, 255, 255, 1);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15),
-              0 3px 10px rgba(0, 0, 0, 0.1),
-              inset 0 1px 0 rgba(255, 255, 255, 1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15), 0 3px 10px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
 .hamburger:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1),
-              0 1px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
 .hamburger span {
@@ -309,9 +305,7 @@ body.loading {
 .hamburger.open {
   background: #ffffff;
   border-color: rgba(255, 255, 255, 1);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12),
-              0 2px 8px rgba(0, 0, 0, 0.08),
-              inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .hamburger.open span {
@@ -337,7 +331,6 @@ body.loading {
   transform: translateY(-50%) rotate(-45deg);
   width: 20px;
 }
-
 
 /* HERO */
 .hero {
@@ -383,18 +376,17 @@ body.loading {
   pointer-events: none;
 }
 
-
 .hero-inner {
   width: 100%;
   padding: 0 5% 80px;
   text-align: left;
 }
 
-/* Judul hero */
+/* Judul hero - Head Font */
 .hero-title {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head);
   font-size: var(--font-size-h1);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.1;
   letter-spacing: -1.5px;
   margin-bottom: 24px;
@@ -403,8 +395,9 @@ body.loading {
   animation: luxuryFadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Sub text hero */
+/* Sub text hero - Body Font */
 .hero-sub {
+  font-family: var(--font-body);
   font-size: var(--font-size-body);
   font-weight: 300;
   line-height: 1.75;
@@ -428,15 +421,16 @@ body.loading {
   align-items: center;
 }
 .about h2 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head);
   color: var(--dark);
   font-size: var(--font-size-h2);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.5px;
   margin-bottom: 20px;
 }
 .about p {
+  font-family: var(--font-body);
   color: var(--muted);
   line-height: 1.85;
   font-weight: 300;
@@ -452,7 +446,7 @@ body.loading {
 }
 
 .about h2 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head);
   font-size: var(--font-size-h2);
 }
 
@@ -492,7 +486,7 @@ body.loading {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  min-height: 420px; /* ukuran BESAR seperti mockup */
+  min-height: 350px; /* Dikurangi dari 420px */
 }
 
 /* each image column */
@@ -519,7 +513,7 @@ body.loading {
   z-index: 1;
 }
 
-/* content overlay */
+/* content overlay - POJOK KIRI MEPET */
 .service-item .overlay {
   position: relative;
   z-index: 2;
@@ -528,22 +522,23 @@ body.loading {
   justify-content: flex-start;
   padding: 0;
   margin-left: 0;
-  margin-top: 5%;
+  margin-top: 24px;
   width: fit-content;
 }
 
-/* overlay box - editorial & premium */
+/* overlay box - editorial & premium - PAS DENGAN KONTEN, TIDAK ADA RUANG KOSONG */
 .service-item .overlay-box {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 120px;
-  background-color: rgba(10, 9, 9, 0.65);
+  gap: 28px;
+  background-color: rgba(10, 9, 9, 0.75);
   backdrop-filter: blur(8px);
-  padding: 20px 32px;
-  border-radius: 4px;
-  width: fit-content;
-  min-width: 400px;
+  padding: 14px 20px;
+  border-radius: 6px;
+  width: fit-content; /* PAS DENGAN KONTEN, TIDAK ADA RUANG KOSONG */
+  min-width: fit-content;
+  max-width: fit-content;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   transition: all 0.4s ease;
 }
@@ -554,30 +549,34 @@ body.loading {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
 }
 
-/* title */
+/* title - Head Font - DIKURANGIN AGAR MUAT DALAM KOTAK */
 .service-item h3 {
   display: block;
   margin: 0;
   color: #f5f2ea;
-  font-family: "Playfair Display", serif;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0.6px;
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
   text-align: left;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  flex-shrink: 0;
+  flex-shrink: 1;
+  white-space: normal;
+  max-width: 160px; /* DIKURANGIN AGAR MUAT */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* button text - inside box, horizontal layout */
+/* button text - inside box, horizontal layout - Head Sans - DISESUAIKAN */
 .service-item .view-more {
   display: inline-block;
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
+  font-family: var(--font-head-sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.9px;
   text-transform: uppercase;
   color: #e2d8c5;
   background-color: transparent;
@@ -585,6 +584,7 @@ body.loading {
   opacity: 0.9;
   transition: all 0.3s ease;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .service-item:hover .view-more {
@@ -604,43 +604,44 @@ body.loading {
 /* ============================= */
 /* REVIEW SECTION – LUXURY */
 /* ============================= */
-
 .review {
   background: linear-gradient(135deg, rgba(178, 102, 50, 0.98), rgba(139, 62, 30, 0.95));
   color: #fff;
-  padding: 15px 0;
+  /* Padding atas bawah dibuat minimalis agar container tidak tinggi */
+  padding: 10px 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-/* Subtle pattern overlay */
+/* Subtle pattern overlay - Tetap sama */
 .review::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: 
-    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+  background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
   pointer-events: none;
 }
 
 .review-container {
-  width: 90%;
-  max-width: 900px;
+  width: 100%;
+  max-width: 550px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 .review-title {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head);
   font-size: var(--font-size-h2);
-  margin-bottom: 20px;
+  /* Jarak judul ke teks dirapatkan drastis (dari 8px ke 2px) */
+  margin-bottom: 2px;
   letter-spacing: 0.5px;
   opacity: 0.98;
   font-weight: 400;
+  /* Opsional: Line height judul dirapatkan */
+  line-height: 1.2;
 }
 
 /* slider wrapper */
@@ -657,47 +658,57 @@ body.loading {
 
 .review-item {
   min-width: 100%;
-  padding: 0 20px;
+  padding: 0 4px; /* Padding samping dikurangi sedikit */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .review-text {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-subhead);
+  font-style: italic;
   font-size: var(--font-size-small);
-  line-height: 1.75;
-  margin-bottom: 12px;
+  /* Line height dirapatkan dari 1.65 ke 1.45 agar blok teks lebih pendek */
+  line-height: 1.45;
+  /* Jarak teks ke nama/tombol dirapatkan (dari 4px ke 2px) */
+  margin-bottom: 2px;
   position: relative;
   opacity: 0.95;
 }
 
-
 .review-name {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: var(--font-size-x-small);
   letter-spacing: 2px;
   opacity: 0.75;
+  margin-bottom: 4px; /* Tambahan margin kecil sebelum tombol */
 }
 
 /* navigation buttons */
 .review-nav {
-  margin-top: 24px;
+  /* Margin top 0 atau bahkan minus sedikit jika ingin sangat rapat */
+  margin-top: 0;
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 10px; /* Jarak antar tombol dirapatkan */
 }
 
 .review-btn {
-  width: 38px;
-  height: 38px;
+  /* UKURAN TOMBOL DIKECILKAN (kunci penghematan ruang vertikal) */
+  /* Dari 38px menjadi 28px */
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.5);
   background: transparent;
   color: #fff;
-  font-size: 18px;
+  /* Font size icon panah disesuaikan */
+  font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex; /* Memastikan icon di tengah */
+  align-items: center;
+  justify-content: center;
 }
 
 .review-btn:hover {
@@ -750,14 +761,16 @@ body.loading {
 }
 
 .owner-title {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head);
   font-size: var(--font-size-h2);
   color: var(--dark);
   margin-bottom: 24px;
 }
 
-/* quote */
+/* quote - Subhead Font (italic) */
 .owner-quote {
+  font-family: var(--font-subhead);
+  font-style: italic;
   font-size: 15px;
   line-height: 1.9;
   color: var(--muted);
@@ -772,8 +785,9 @@ body.loading {
   margin-bottom: 18px;
 }
 
-/* name */
+/* name - Body Font */
 .owner-name {
+  font-family: var(--font-body);
   font-size: 12px;
   letter-spacing: 2px;
   color: var(--dark);
@@ -794,9 +808,7 @@ body.loading {
 .footer-pattern {
   position: absolute;
   inset: 0;
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 40%);
+  background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 40%);
   pointer-events: none;
   z-index: 0;
 }
@@ -815,9 +827,9 @@ body.loading {
   margin-bottom: 32px;
 }
 
-/* Widget Styling */
+/* Widget Styling - Head Font */
 .footer-title {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head);
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -838,18 +850,19 @@ body.loading {
 
 /* 1. Brand Widget */
 .footer-logo-img {
-  width: auto;           /* Biarkan rasio aspek terjaga */
-  max-width: 280px;      /* DIPERBESAR: Sebelumnya 180px */
-  max-height: 120px;     /* DIPERBESAR: Sebelumnya 80px */
-  margin-bottom: 24px;   /* Jarak ke deskripsi bawahnya */
+  width: auto; /* Biarkan rasio aspek terjaga */
+  max-width: 280px; /* DIPERBESAR: Sebelumnya 180px */
+  max-height: 120px; /* DIPERBESAR: Sebelumnya 80px */
+  margin-bottom: 24px; /* Jarak ke deskripsi bawahnya */
   display: block;
   object-fit: contain;
-  
+
   /* OPSIONAL: Jika logo aslimu hitam, aktifkan ini agar jadi putih */
   /* filter: brightness(0) invert(1); */
 }
 
 .footer-desc {
+  font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.85);
@@ -868,6 +881,7 @@ body.loading {
 }
 
 .footer-links a {
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   font-size: 15px;
@@ -909,6 +923,7 @@ body.loading {
 }
 
 .address-item {
+  font-family: var(--font-body);
   margin: 0;
   font-size: 15px;
   line-height: 1.6;
@@ -916,6 +931,7 @@ body.loading {
 }
 
 .contact-link {
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.95);
   text-decoration: none;
   font-size: 15px;
@@ -963,6 +979,7 @@ body.loading {
 }
 
 .footer-copyright {
+  font-family: var(--font-body);
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
   margin: 0;
@@ -1037,7 +1054,7 @@ body.loading {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 28px;
   }
-  
+
   .brand-widget {
     grid-column: 1 / -1;
     text-align: center;
@@ -1046,13 +1063,13 @@ body.loading {
     align-items: center;
     margin-bottom: 10px;
   }
-  
+
   .footer-logo-img {
     max-width: 240px;
     max-height: 100px;
     margin-bottom: 20px;
   }
-  
+
   .footer-desc {
     margin: 0 auto;
     max-width: 500px;
@@ -1584,7 +1601,7 @@ body.loading {
 }
 
 .location-header h2 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head);
   font-size: 42px;
   color: var(--dark);
   margin: 0 0 18px;
@@ -1592,6 +1609,7 @@ body.loading {
 }
 
 .location-header p {
+  font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.9;
   color: var(--muted);
@@ -1619,7 +1637,7 @@ body.loading {
 }
 
 .location-item h3 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head);
   font-size: 24px;
   letter-spacing: 1px;
   color: var(--accent);
@@ -1628,6 +1646,7 @@ body.loading {
 }
 
 .location-item p {
+  font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.8;
   color: var(--muted);
@@ -1662,9 +1681,7 @@ body.loading {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: 
-    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+  background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -1674,15 +1691,16 @@ body.loading {
 }
 
 .booking-inner h2 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head);
   font-size: 52px;
   margin-bottom: 20px;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.8px;
   line-height: 1.15;
 }
 
 .booking-inner p {
+  font-family: var(--font-body);
   font-size: 17px;
   opacity: 0.94;
   margin-bottom: 40px;
@@ -1705,8 +1723,7 @@ body.loading {
   letter-spacing: 0.8px;
   display: inline-block;
   transition: var(--transition-smooth);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15),
-              0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -1722,8 +1739,7 @@ body.loading {
 
 .btn-cta-large:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2),
-              0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2), 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .btn-cta-large:hover::before {
@@ -1767,11 +1783,11 @@ body.loading {
   text-align: left;
 }
 
-/* title */
+/* title - Head Font */
 .location-hero .hero-title {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head);
   font-size: var(--font-size-h1);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.1;
   letter-spacing: -1.5px;
   margin-bottom: 24px;
@@ -1780,8 +1796,9 @@ body.loading {
   animation: luxuryFadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* subtitle */
+/* subtitle - Body Font */
 .location-hero .hero-sub {
+  font-family: var(--font-body);
   max-width: 580px;
   font-size: var(--font-size-body);
   font-weight: 300;
@@ -1820,7 +1837,7 @@ body.loading {
 }
 
 .location-branch h3 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head);
   font-size: 18px; /* sebelumnya 20px */
   margin-bottom: 8px;
 }
@@ -1898,8 +1915,7 @@ body.loading {
   padding: 100px 32px 40px;
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2000;
-  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.3),
-              -10px 0 30px rgba(0, 0, 0, 0.2);
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.3), -10px 0 30px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
 }
 
@@ -1907,9 +1923,7 @@ body.loading {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: 
-    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+  background-image: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -1936,7 +1950,7 @@ body.loading {
   color: #fff;
   text-decoration: none;
   font-size: 19px;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-head);
   letter-spacing: 0.5px;
   font-weight: 400;
   display: block;
@@ -2025,15 +2039,24 @@ body.loading {
   }
   .service-item .overlay {
     margin-left: 0;
-    margin-top: 4%;
+    margin-top: 20px;
   }
   .service-item .overlay-box {
-    min-width: 320px;
-    padding: 18px 28px;
-    gap: 36px;
+    width: fit-content; /* PAS DENGAN KONTEN */
+    min-width: fit-content;
+    max-width: fit-content;
+    padding: 14px 20px;
+    gap: 28px;
   }
   .service-item h3 {
-    font-size: 22px;
+    font-size: 18px;
+    white-space: normal;
+    line-height: 1.2;
+    max-width: 160px;
+  }
+  .service-item .view-more {
+    font-size: 9px;
+    letter-spacing: 0.9px;
   }
 }
 
@@ -2049,43 +2072,43 @@ body.loading {
     border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
     border-radius: 11px !important;
   }
-  
+
   .hamburger span {
     width: 19px !important;
     height: 2.5px !important;
     background: var(--dark) !important;
   }
-  
+
   .hamburger span:nth-child(1) {
     top: 12px !important;
   }
-  
+
   .hamburger span:nth-child(3) {
     bottom: 12px !important;
   }
-  
+
   .hamburger.open span:nth-child(1),
   .hamburger.open span:nth-child(3) {
     width: 19px !important;
   }
-  
+
   .hero-title {
     font-size: 52px;
   }
-  
+
   .location-hero .hero-title {
     font-size: 56px;
   }
-  
+
   .location-header h2 {
     font-size: 38px;
   }
-  
+
   .locations-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
   }
-  
+
   .location-branches {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2107,26 +2130,26 @@ body.loading {
     border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
     border-radius: 12px !important;
   }
-  
+
   .hamburger span {
     width: 20px !important;
     height: 2.5px !important;
     background: var(--dark) !important;
   }
-  
+
   .hamburger span:nth-child(1) {
     top: 13px !important;
   }
-  
+
   .hamburger span:nth-child(3) {
     bottom: 13px !important;
   }
-  
+
   .hamburger.open span:nth-child(1),
   .hamburger.open span:nth-child(3) {
     width: 20px !important;
   }
-  
+
   .nav-actions {
     gap: 10px;
   }
@@ -2169,7 +2192,6 @@ body.loading {
     font-size: 38px;
   }
 
-
   /* Sections */
   .about .split {
     grid-template-columns: 1fr;
@@ -2206,7 +2228,7 @@ body.loading {
     width: 96%;
     border-radius: 20px;
   }
-  
+
   .map-wrapper iframe {
     height: 300px;
   }
@@ -2224,55 +2246,55 @@ body.loading {
     border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
     border-radius: 11px !important;
   }
-  
+
   .hamburger span {
     width: 19px !important;
     height: 2.5px !important;
     background: var(--dark) !important;
   }
-  
+
   .hamburger span:nth-child(1) {
     top: 13px !important;
   }
-  
+
   .hamburger span:nth-child(3) {
     bottom: 13px !important;
   }
-  
+
   .hamburger.open span:nth-child(1),
   .hamburger.open span:nth-child(3) {
     width: 19px !important;
   }
-  
+
   .nav-actions {
     gap: 10px;
   }
-  
+
   .hero-title {
     font-size: 42px;
   }
-  
+
   .location-hero .hero-title {
     font-size: 44px;
   }
-  
+
   .location-header h2 {
     font-size: 34px;
   }
-  
+
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .location-branches {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .map-wrapper {
     width: 94%;
     border-radius: 22px;
   }
-  
+
   .map-wrapper iframe {
     height: 320px;
   }
@@ -2296,12 +2318,12 @@ body.loading {
   .nav-actions {
     gap: 10px;
   }
-  
+
   .nav-actions .btn-book {
     padding: 7px 14px;
     font-size: 12px;
   }
-  
+
   .hamburger {
     width: 40px !important;
     height: 40px !important;
@@ -2312,31 +2334,31 @@ body.loading {
     visibility: visible !important;
     opacity: 1 !important;
   }
-  
+
   .hamburger span {
     width: 18px !important;
     height: 2.5px !important;
     background: var(--dark) !important;
   }
-  
+
   .hamburger span:nth-child(1) {
     top: 12px !important;
   }
-  
+
   .hamburger span:nth-child(3) {
     bottom: 12px !important;
   }
-  
+
   .hamburger.open span:nth-child(1),
   .hamburger.open span:nth-child(3) {
     width: 18px !important;
   }
-  
+
   .hamburger:hover {
     background: #ffffff !important;
     border-color: rgba(255, 255, 255, 1) !important;
   }
-  
+
   .hamburger.open {
     background: #ffffff !important;
     border-color: rgba(255, 255, 255, 1) !important;
@@ -2355,28 +2377,37 @@ body.loading {
   }
   .service-item .overlay {
     margin-left: 0;
-    margin-top: 4%;
+    margin-top: 16px;
   }
   .service-item .overlay-box {
-    min-width: 280px;
-    padding: 16px 24px;
-    gap: 20px;
+    width: fit-content; /* PAS DENGAN KONTEN */
+    min-width: fit-content;
+    max-width: fit-content;
+    padding: 14px 20px;
+    gap: 28px;
+    flex-wrap: nowrap;
   }
   .service-item h3 {
     font-size: 18px;
-    line-height: 1.25;
+    white-space: normal;
+    max-width: 160px;
   }
   .service-item .view-more {
     font-size: 9px;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.9px;
   }
 
   /* Reviews */
   .review-container {
-    padding: 0 16px;
+    width: 70%; /* DIKURANGIN LAGI UNTUK MOBILE */
+    max-width: 85%; /* BATASI MAX-WIDTH */
+    padding: 0 12px;
   }
   .review-item {
-    padding: 0 12px;
+    padding: 0 8px;
+  }
+  .review-nav {
+    margin-top: 8px; /* DIKURANGIN LAGI UNTUK MOBILE */
   }
   .review-text {
     font-size: 14px;
@@ -2384,7 +2415,7 @@ body.loading {
   .review-title {
     font-size: 28px;
   }
-  
+
   /* Owner Section */
   .owner {
     padding: 60px 0;
@@ -2420,32 +2451,32 @@ body.loading {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
-  
+
   .map-wrapper {
     width: 94%;
     border-radius: 20px;
   }
-  
+
   .map-wrapper iframe {
     height: 300px;
   }
-  
+
   .booking-inner h2 {
     font-size: 32px;
   }
   .booking-inner p {
     font-size: 14px;
   }
-  
+
   /* Section Padding */
   :root {
     --section-padding: 60px;
   }
-  
+
   .page-section {
     padding: var(--section-padding) 0;
   }
-  
+
   .container {
     padding: 0 20px;
   }
@@ -2463,115 +2494,126 @@ body.loading {
     visibility: visible !important;
     opacity: 1 !important;
   }
-  
+
   .hamburger span {
     width: 17px !important;
     height: 2.5px !important;
     background: var(--dark) !important;
   }
-  
+
   .hamburger span:nth-child(1) {
     top: 12px !important;
   }
-  
+
   .hamburger span:nth-child(3) {
     bottom: 12px !important;
   }
-  
+
   .hamburger.open span:nth-child(1),
   .hamburger.open span:nth-child(3) {
     width: 17px !important;
   }
-  
+
   .nav-actions {
     gap: 8px;
   }
-  
+
   .nav-actions .btn-book {
     padding: 6px 12px;
     font-size: 11px;
   }
-  
+
   :root {
     --section-padding: 50px;
   }
-  
+
   .container {
     width: 92%;
   }
-  
+
   .hero-title {
     font-size: 36px;
   }
-  
+
   .hero-sub {
     font-size: 14px;
   }
-  
+
   .location-hero .hero-title {
     font-size: 34px;
   }
-  
+
   .location-hero .hero-inner {
     padding: 0 4% 50px;
   }
-  
+
   .hero-inner {
     padding: 0 4% 30px;
   }
-  
+
   .locations-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .location-header {
     margin-bottom: 36px;
   }
-  
+
   .location-header h2 {
     font-size: 28px;
   }
-  
+
   .booking-inner h2 {
     font-size: 26px;
   }
-  
+
   .booking-inner p {
     font-size: 13px;
   }
-  
+
   .location-branches {
     grid-template-columns: 1fr;
   }
-  
+
   .map-wrapper {
     width: 96%;
     border-radius: 18px;
   }
-  
+
   .map-wrapper iframe {
     height: 280px;
   }
-  
+
   .service-item .overlay-box {
-    min-width: 260px;
-    padding: 14px 20px;
-    gap: 16px;
+    width: fit-content; /* PAS DENGAN KONTEN */
+    min-width: fit-content;
+    max-width: fit-content;
+    padding: 12px 18px;
+    gap: 24px;
+    flex-wrap: nowrap;
   }
-  
+
   .service-item h3 {
     font-size: 16px;
+    white-space: normal;
+    max-width: 130px;
+    line-height: 1.15;
   }
-  
+
+  .service-item .view-more {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
   .review-container {
     padding: 0 16px;
   }
-  
+
   .review-text {
     font-size: 13px;
   }
-  
+
   .footer-inner {
     padding: 48px 20px 28px;
   }
@@ -2617,58 +2659,69 @@ body.loading {
     width: 94%;
     padding: 0 14px;
   }
-  
+
   .hero-title {
     font-size: 32px;
   }
-  
+
   .hero-sub {
     font-size: 13px;
   }
-  
+
   .location-hero .hero-title {
     font-size: 30px;
   }
-  
+
   .location-header h2 {
     font-size: 26px;
   }
-  
+
   .booking-inner h2 {
     font-size: 24px;
   }
-  
+
   .map-wrapper {
     width: 96%;
     border-radius: 16px;
   }
-  
+
   .map-wrapper iframe {
     height: 260px;
   }
-  
+
   .location-item {
     padding: 20px 16px;
   }
-  
+
   .service-item .overlay-box {
-    min-width: 240px;
+    width: fit-content; /* PAS DENGAN KONTEN */
+    min-width: fit-content;
+    max-width: fit-content;
     padding: 12px 18px;
-    gap: 14px;
+    gap: 24px;
+    flex-wrap: nowrap;
   }
-  
+
   .service-item h3 {
-    font-size: 15px;
+    font-size: 16px;
+    white-space: normal;
+    line-height: 1.15;
+    max-width: 130px;
   }
-  
+
+  .service-item .view-more {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
   .review-title {
     font-size: 24px;
   }
-  
+
   .review-text {
     font-size: 12px;
   }
-  
+
   .footer-inner {
     padding: 40px 16px 24px;
   }
@@ -2731,8 +2784,7 @@ body.loading {
   opacity: 1;
   animation: loaderFadeIn 0.8s ease-out;
   object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2))
-          drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
 }
 
 .loader-spinner {
@@ -2799,19 +2851,19 @@ body.loading {
   .loader-logo {
     width: 100px;
   }
-  
+
   .loader-spinner {
     width: 40px;
     height: 40px;
   }
-  
+
   .loader-spinner::after {
     width: 30px;
     height: 30px;
     top: 5px;
     left: 5px;
   }
-  
+
   .loader-content {
     gap: 28px;
   }
@@ -2821,19 +2873,19 @@ body.loading {
   .loader-logo {
     width: 90px;
   }
-  
+
   .loader-spinner {
     width: 36px;
     height: 36px;
   }
-  
+
   .loader-spinner::after {
     width: 28px;
     height: 28px;
     top: 4px;
     left: 4px;
   }
-  
+
   .loader-content {
     gap: 24px;
   }

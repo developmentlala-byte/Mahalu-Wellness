@@ -3,31 +3,7 @@ const lightbox = document.getElementById("galleryLightbox");
 const lightboxImage = document.getElementById("lightboxImage");
 const closeBtn = document.querySelector(".lightbox-close");
 
-/* ================= NAVBAR SCROLL HIDE ================= */
-let lastScrollY = window.scrollY;
-const header = document.querySelector(".site-header");
-
-window.addEventListener("scroll", () => {
-  const currentScrollY = window.scrollY;
-
-  // efek background saat scroll
-  if (currentScrollY > 10) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-
-  // hide / show navbar
-  if (currentScrollY > lastScrollY && currentScrollY > 120) {
-    // scroll ke bawah
-    header.classList.add("hide");
-  } else {
-    // scroll ke atas
-    header.classList.remove("hide");
-  }
-
-  lastScrollY = currentScrollY;
-});
+/* Note: Navbar hide/show behavior is handled by layout.js */
 
 galleryItems.forEach((img) => {
   img.addEventListener("click", () => {
